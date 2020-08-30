@@ -36,8 +36,8 @@
       <div class="mapMenu">
         <form class="formSearch">
           <ul class='menuNav'>
-            <li><a href="#" class="iconItem"><img src="images/ih-satellite.png" alt="satellite view"></a></li>
-            <li><a href="#" class="iconItem"><img src="images/ih-crosshairs.png" alt="track ur location"></a></li>
+            <li class="satelliteView"><a href="#" class="iconItem"><img src="images/ih-satellite.png" alt="satellite view"></a></li>
+            <li class="locationView"><a href="#" class="iconItem"><img src="images/ih-crosshairs.png" alt="track ur location"></a></li>
             <li class="searchMap">
               <div class='form-group'>
                 <input type="text" id="searchInput" class="form-control searchInput">
@@ -46,40 +46,48 @@
                     alt="search"></a>
               </div>
             </li>
-            <li class="setAddress" data-trigger="#navbar_main">
+            <li class="setAddress setAddressLarge" data-trigger="#navbar_main">
               <a href="#"><img alt="logo" src="images/ih-logo.png">
                 Set your IH address </a>
             </li>
-            <li>
-              <button class="navbar-toggler navbar-toggler-right bg-color" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-              </button>
-              <div class="collapse navbar-collapse text-left bg-light" id="navbarResponsive">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" href="#">About IH</a>
-                  </li>
 
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Developers</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                  </li>
-                </ul>
+            <li class="menuGroupCont">
+              <div class="btn-group">
+                <button type="button" class="btn navbar-toggler dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="dropdown-menu">
+                  <ul class="list-unstyled">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">About IH</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class=" nav-link" href="#">Developers</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class=" nav-link" href="#">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
+
             </li>
           </ul>
         </form>
       </div>
       <!-----------------the offCanvas - left side bar------------------->
-      <div class="mobile-offcanvas" id='navbar_main'>
-        <div class="offcanvas-header">
-          <button class="float-right"><i class="las la-ellipsis-v"></i></button>
-        </div>
+      <div class="mobile-offcanvas sideFullHeight" id='navbar_main'>
         <div class="mapSideMenu">
+          <div class="offcanvas-header">
+            <!-------mobile view-------->
+            <li class="setAddress setAddressSmall"  id ="login_soicel" data-trigger="#navbar_main">
+             <a href="#"><img alt="logo" src="images/ih-logo.png">
+               Set your IH address </a>
+               <span class="fa arrow"></span>
+           </li>
+           <!-------END mobile view-------->
+           <button class="float-right d-none d-md-block toggleSideMenu"><i class="las la-ellipsis-v"></i></button>
+         </div>
           <div class="mapSideWrapper buildingSlider">
             <div id="carouselExampleIndicators" class="carousel slide" data data-pause="true">
               <div class="carousel-inner">
@@ -126,14 +134,30 @@
                 <a href="#">
                   <li><i class="fas fa-bookmark"></i><small>save</small></li>
                 </a>
-                <a href="#">
-                  <li><i class="fas fa-share-alt"></i><small>share</small></li>
+                <a href="#"  id="IHShare">
+                  <li class="collapsed" data-toggle="collapse" data-target="#collapseIHShare" aria-expanded="false" aria-controls="collapseIHShare">
+                    <i class="fas fa-share-alt"></i><small>share</small></li>
                 </a>
                 <a href="#">
                   <li><i class="fas fa-directions"></i><small>direction</small></li>
                 </a>
               </ul>
             </div>
+        
+              <div class="IHShareGroup">
+                <div id="collapseIHShare" class="collapse" aria-labelledby="IHShare">
+                  <div class="card-body bg-light">
+                     <p>This is an example of what you'll share</p>
+                     <div class="bg-white IHShareView">971.34.344.7777 <a href="#"><i class="far fa-copy"></i></a></div>
+                     <ul class="socialIcons">
+                       <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                       <li><a href=""><i class="fab fa-google"></i></a></li>
+                       <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                     </ul>
+                  </div>
+                </div>
+              </div>
+            
           </div>
           <div class="mapSideWrapper buildingAddress">
             <div class="address">

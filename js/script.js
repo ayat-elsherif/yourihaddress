@@ -1,35 +1,36 @@
 /************** the offCanvas - left side bar**************************/
 $(function () {
 
-  $(".btn-close, .screen-overlay, #navbarSupportedContent .nav-item").click(function (e) {
-    $(".screen-overlay").removeClass("showCanvas");
-    $(".mobile-offcanvas").removeClass("showCanvas");
-    $("body").removeClass("offcanvas-active");
-  });
-  $(window).resize(function () {
-    if ($(".screen-overlay").hasClass("showCanvas")) {
+  // $(".btn-close, .screen-overlay, #navbarSupportedContent .nav-item").click(function (e) {
+  //   $(".screen-overlay").removeClass("showCanvas");
+  //   $(".mobile-offcanvas").removeClass("showCanvas");
+  //   $("body").removeClass("offcanvas-active");
+  // });
+  // $(window).resize(function () {
+  //   if ($(".screen-overlay").hasClass("showCanvas")) {
+  //       $(".mobile-offcanvas").removeClass("showCanvas");
+  //       $("body").removeClass("offcanvas-active");
+  //       $(".screen-overlay").removeClass("showCanvas");
+  //     }
+  // });
 
-      $(".mobile-offcanvas").removeClass("showCanvas");
-      $("body").removeClass("offcanvas-active");
-      $(".screen-overlay").removeClass("showCanvas");
-    }
+  $(".offcanvas-header, .setAddress.setAddressLarge:not('#accordion') a").click(function () {
+      $('.mobile-offcanvas').toggleClass("showCanvas");
+
   });
 
-  $(".offcanvas-header, .setAddress:not('#accordion')").click(function () {
-    if ($('.mobile-offcanvas').hasClass("showCanvas")) {
-      $('.mobile-offcanvas').removeClass("showCanvas");
-      $('.offcanvas-header button').html('<i class="las la-ellipsis-v">');
-    } else {
-      $('.mobile-offcanvas').addClass("showCanvas");
-      $('.offcanvas-header button').html('<i class="la la-times"></i>');
-    }
+  $('.setAddressSmall').click(function(e){
+      e.stopPropagation()
+
+      $('.mobile-offcanvas').toggleClass("showCanvas");
+      $('.setAddressSmall span').toggleClass("down");
   });
 
 /**********************************the dropdown menu close****************************** */
-/*collapse close*/
-$(document).on('click',function(){
-  $('.collapse').collapse('hide');
-})
+// /*collapse close*/
+// $(document).on('click',function(){
+//   $('.collapse').collapse('hide');
+// })
   /*****************************toggle close/search buttons******************************* */
 
   let searchInput = $(".searchInput");
@@ -48,7 +49,6 @@ $(document).on('click',function(){
     } else {
       $(cancelIcon).hide();
       $(searchIcon).show();
-
     }
   });
 
@@ -94,7 +94,7 @@ $(".hintPhotos button").click(function () {
 
 /********************************************************************************** */
 
-$(".map").click(function () {
-  $(".mobile-offcanvas").addClass('showCanvas');
-  $('.offcanvas-header button').html('<i class="la la-times"></i>');
-});
+// $(".map").click(function () {
+//   $(".mobile-offcanvas").addClass('showCanvas');
+//   $('.offcanvas-header button').html('<i class="la la-times"></i>');
+// });

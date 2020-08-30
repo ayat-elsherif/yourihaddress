@@ -18,6 +18,15 @@
   padding:0;
 }
 
+.mapOptions{
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+}
+.mapOptions .formSearch{
+  height: 100%;
+}
 
 @media screen and (max-width:991px) {
   .mobile-offcanvas{
@@ -30,3 +39,26 @@
     transform: translateY(5%);
   }
 }
+
+
+ul.menuNav{
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  height: 100%;
+  padding: 0px;
+}
+
+
+ul.menuNav .searchMap{
+  position: absolute;
+  top: 0px;
+  width: 90%;
+}
+
+
+ul.menuNav .setAddress a img, ul.menuNav .setAddress span img {
+  width: 40px;
+}
+
