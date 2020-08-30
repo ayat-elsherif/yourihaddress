@@ -1,0 +1,64 @@
+
+.offcanvas-header{
+    top: -38px;
+    left: 0px;
+    right: auto;
+    width: 100%;
+    z-index: 10;
+}
+.offcanvas-header button{
+  width: 100%;
+  background: #ed414e;
+  color:#eee;
+}
+.offcanvas-header button:hover{
+  background: #f55865;
+}
+.mapSideMenu{
+  padding:0;
+}
+
+.mapOptions{
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+}
+.mapOptions .formSearch{
+  height: 100%;
+}
+
+@media screen and (max-width:991px) {
+  .mobile-offcanvas{
+    width:100%;
+    transform: translateY(100%);
+    top:auto;
+    bottom:0;
+  }
+  .mobile-offcanvas.showCanvas{
+    transform: translateY(5%);
+  }
+}
+
+
+ul.menuNav{
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  height: 100%;
+  padding: 0px;
+}
+
+
+ul.menuNav .searchMap{
+  position: absolute;
+  top: 0px;
+  width: 90%;
+}
+
+
+ul.menuNav .setAddress a img, ul.menuNav .setAddress span img {
+  width: 40px;
+}
+

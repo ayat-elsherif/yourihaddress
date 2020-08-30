@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#ed414e">
+  <meta name="description" content="set your ih address">
+  <meta property="og:site_name" content="ihaddress.Com">
+  <meta property="og:url" content=" www.ihaddress.com">
+  <meta property="og:image" content="images/favicon.png">
+  <meta name="robots" content="index,follow,max-snippet:100">
+  <meta name="googlebot" content="index,follow,max-snippet:100">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <title>IH Address</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/line-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style-min.css">
+
+</head>
+
+<body>
+  <div class="container-fluid px-0 mapContainer">
+    <!------------------the map element--------------------->
+    <div class="map">
+      <!-- <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d55306.73397503105!2d30.938824844379333!3d29.960144228369224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1593018615850!5m2!1sen!2seg"
+        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe> -->
+    </div>
+    <!------------------end the map element------------------->
+    <!---------------------map options ----------------------->
+    <nav class="mapOptions">
+      <div class="mapMenu">
+        <form class="formSearch">
+          <ul class='menuNav'>
+            <li class="satelliteView"><a href="#" class="iconItem"><img src="images/ih-satellite.png" alt="satellite view"></a></li>
+            <li class="locationView"><a href="#" class="iconItem"><img src="images/ih-crosshairs.png" alt="track ur location"></a></li>
+            <li class="searchMap">
+              <div class='form-group'>
+                <input type="text" id="searchInput" class="form-control searchInput">
+                <a href="#" class="iconItem search"><img src="images/ih-search.png" alt="search"></a>
+                <a href="#" class="iconItem cancel" style="display: none;"><img src="images/ih-cancel.png"
+                    alt="search"></a>
+              </div>
+            </li>
+            <li class="setAddress setAddressLarge" data-trigger="#navbar_main">
+              <a href="#"><img alt="logo" src="images/ih-logo.png">
+                Set your IH address </a>
+            </li>
+
+            <li class="menuGroupCont">
+              <div class="btn-group">
+                <button type="button" class="btn navbar-toggler dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                </button>
+                <div class="dropdown-menu">
+                  <ul class="list-unstyled">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">About IH</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class=" nav-link" href="#">Developers</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class=" nav-link" href="#">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+            </li>
+          </ul>
+        </form>
+      </div>
+      <!-----------------the offCanvas - left side bar------------------->
+      <div class="mobile-offcanvas sideFullHeight" id='navbar_main'>
+        <div class="mapSideMenu">
+          <div class="offcanvas-header">
+            <!-------mobile view-------->
+            <li class="setAddress setAddressSmall"  id ="login_soicel" data-trigger="#navbar_main">
+             <a href="#"><img alt="logo" src="images/ih-logo.png">
+               Set your IH address </a>
+               <span class="fa arrow"></span>
+           </li>
+           <!-------END mobile view-------->
+           <button class="float-right d-none d-md-block toggleSideMenu"><i class="las la-ellipsis-v"></i></button>
+         </div>
+          <div class="mapSideWrapper buildingSlider">
+            <div id="carouselExampleIndicators" class="carousel slide" data data-pause="true">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block w-100" src="images/building.jpeg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="images/building2.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="images/building.jpeg" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" src="images/building2.jpg" alt="forth slide">
+                </div>
+              </div>
+              <ol class="carousel-indicators">
+                <img data-target="#carouselExampleIndicators" data-slide-to="0" class="active"
+                  src="images/building.jpeg" alt="first slide">
+                <img data-target="#carouselExampleIndicators" data-slide-to="1" width="30" src="images/building2.jpg"
+                  alt="second slide">
+                <img data-target="#carouselExampleIndicators" data-slide-to="2" width="30" src="images/building.jpeg"
+                  alt="Third slide">
+                <img data-target="#carouselExampleIndicators" data-slide-to="3" width="30" src="images/building2.jpg"
+                  alt="forth slide">
+              </ol>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="mapSideWrapper buildingSocial">
+            <div class="ihNumber">
+              <p>971.34.344.7777 <span class=" ml-1"><img src="images/ih-check.png" alt='Accurate address'> (95%)</span>
+              </p>
+            </div>
+            <hr class="row">
+            <div class="shareOptions row d-flex justify-content-center">
+              <ul>
+                <a href="#">
+                  <li><i class="fas fa-clone"></i><small>copy link</small></li>
+                </a>
+                <a href="#">
+                  <li><img src='images/ih-logo.png' alt="ih" width="45"><small>copy no.</small></li>
+                </a>
+                <a href="#">
+                  <li><i class="fas fa-bookmark"></i><small>save</small></li>
+                </a>
+                <a href="#"  id="IHShare">
+                  <li class="collapsed" data-toggle="collapse" data-target="#collapseIHShare" aria-expanded="false" aria-controls="collapseIHShare">
+                    <i class="fas fa-share-alt"></i><small>share</small></li>
+                </a>
+                <a href="#">
+                  <li><i class="fas fa-directions"></i><small>direction</small></li>
+                </a>
+              </ul>
+            </div>
+        
+              <div class="IHShareGroup">
+                <div id="collapseIHShare" class="collapse" aria-labelledby="IHShare">
+                  <div class="card-body bg-light">
+                     <p>This is an example of what you'll share</p>
+                     <div class="bg-white IHShareView">971.34.344.7777 <a href="#"><i class="far fa-copy"></i></a></div>
+                     <ul class="socialIcons">
+                       <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                       <li><a href=""><i class="fab fa-google"></i></a></li>
+                       <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                     </ul>
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+          <div class="mapSideWrapper buildingAddress">
+            <div class="address">
+              <h5>Address</h5>
+              <p>Apartment: 210, El-Ewis bldg, Ammar Bin Yasser road, Elmowahiat 3 ,Ajman.</p>
+            </div>
+            <hr class="row">
+            <div class="landmark">
+              <h5>landmark</h5>
+              <p>Opposite: Ajman Academy. Opposite: Ajman Academy.Opposite: Ajman Academy.</p>
+            </div>
+
+            <div class="checkAddress text-center mt-4">
+              <span class="btn"> Is it correct address?
+                <a class="checkedYes" href=""><i class="las la-check"></i>YES</a>
+                <a class="checkedNo" href=""><i class="las la-times"></i>NO</a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
