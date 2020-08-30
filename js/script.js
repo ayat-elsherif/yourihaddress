@@ -20,8 +20,8 @@ $(function () {
   });
 
   $('.setAddressSmall').click(function(e){
-      e.stopPropagation()
-
+      e.stopPropagation();
+     $('.menuGroupCont .dropdown-menu').removeClass('show');
       $('.mobile-offcanvas').toggleClass("showCanvas");
       $('.setAddressSmall span').toggleClass("down");
   });
@@ -93,8 +93,3 @@ $(".hintPhotos button").click(function () {
 
 
 /********************************************************************************** */
-
-// $(".map").click(function () {
-//   $(".mobile-offcanvas").addClass('showCanvas');
-//   $('.offcanvas-header button').html('<i class="la la-times"></i>');
-// });
