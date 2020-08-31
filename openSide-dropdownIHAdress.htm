@@ -34,20 +34,21 @@
     <!---------------------map options ----------------------->
     <nav class="mapOptions">
       <div class="mapMenu">
-        <form class="formSearch">
           <ul class='menuNav'>
             <li class="satelliteView"><a href="#" class="iconItem"><img src="images/ih-satellite.png" alt="satellite view"></a></li>
             <li class="locationView"><a href="#" class="iconItem"><img src="images/ih-crosshairs.png" alt="track ur location"></a></li>
             <li class="searchMap">
+              <form class="formSearch">
               <div class='form-group'>
                 <input type="text" id="searchInput" class="form-control searchInput">
                 <a href="#" class="iconItem search"><img src="images/ih-search.png" alt="search"></a>
                 <a href="#" class="iconItem cancel" style="display: none;"><img src="images/ih-cancel.png"
                     alt="search"></a>
               </div>
+            </form>
             </li>
-            <li class="setAddress" id="accordion">
-              <span href="#" id="heading" data-toggle="collapse" data-target="#collapsing" aria-expanded="true"
+            <li class="setAddress setAddressLarge" id="accordion">
+              <div href="#" id="heading" data-toggle="collapse" data-target="#collapsing" aria-expanded="true"
                 aria-controls="collapsing">
                 <img alt="logo" src="images/ih-logo.png">
                 971.34.344.7777
@@ -63,7 +64,7 @@
                     </ul>
                   </div>
                 </div>
-              </span>
+              </div>
             </li>
             <li class="menuGroupCont">
               <div class="btn-group">
@@ -87,16 +88,22 @@
 
             </li>
           </ul>
-        </form>
+        
       </div>
       <!-----------------the offCanvas - left side bar------------------->
-      <div class="mobile-offcanvas" id='navbar_main'>
-        <div class="offcanvas-header">
-          <button class="float-right"><i class="las la-ellipsis-v"></i></button>
+      <div class="mobile-offcanvas showCanvas sideFullHeight" id='navbar_main'>
+        <div class="offcanvas-header"> <!-------mobile view-------->
+          <li class="setAddress setAddressSmall"  id ="login_soicel" data-trigger="#navbar_main">
+              <a href="#"><img alt="logo" src="images/ih-logo.png">
+                Set your IH address </a>
+                <span class="fa arrow"></span>
+            </li>
+            <!-------END mobile view-------->
+            <button class="float-right d-none d-md-block toggleSideMenu"><i class="las la-ellipsis-v"></i></button>
         </div>
         <div class="mapSideMenu">
           <div class="mapSideWrapper buildingSlider">
-            <div id="carouselExampleIndicators" class="carousel slide" data data-pause="true">
+            <div id="ihAddressCarousel" class="carousel slide" data data-pause="true">
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img class="d-block w-100" src="images/building.jpeg" alt="First slide">
@@ -114,11 +121,11 @@
               <ol class="carousel-indicators">
                 <img data-target="#carouselExampleIndicators" data-slide-to="0" class="active"
                   src="images/building.jpeg" alt="first slide">
-                <img data-target="#carouselExampleIndicators" data-slide-to="1" width="30" src="images/building2.jpg"
+                <img data-target="#ihAddressCarousel" data-slide-to="1" width="30" src="images/building2.jpg"
                   alt="second slide">
-                <img data-target="#carouselExampleIndicators" data-slide-to="2" width="30" src="images/building.jpeg"
+                <img data-target="#ihAddressCarousel" data-slide-to="2" width="30" src="images/building.jpeg"
                   alt="Third slide">
-                <img data-target="#carouselExampleIndicators" data-slide-to="3" width="30" src="images/building2.jpg"
+                <img data-target="#ihAddressCarousel" data-slide-to="3" width="30" src="images/building2.jpg"
                   alt="forth slide">
               </ol>
               <div class="clearfix"></div>
@@ -129,8 +136,8 @@
               <p>971.34.344.7777 <span class=" ml-1"><img src="images/ih-check.png" alt='Accurate address'> (95%)</span>
               </p>
             </div>
-            <hr class="row">
-            <div class="shareOptions row d-flex justify-content-center">
+            <hr>
+            <div class="shareOptions d-flex justify-content-center">
               <ul>
                 <a href="#">
                   <li><i class="fas fa-clone"></i><small>copy link</small></li>
@@ -142,12 +149,26 @@
                   <li><i class="fas fa-bookmark"></i><small>save</small></li>
                 </a>
                 <a href="#">
-                  <li><i class="fas fa-share-alt"></i><small>share</small></li>
+                  <li class="collapsed" data-toggle="collapse" data-target="#collapseIHShare" aria-expanded="false" aria-controls="collapseIHShare">
+                    <i class="fas fa-share-alt"></i><small>share</small></li>
                 </a>
                 <a href="#">
                   <li><i class="fas fa-directions"></i><small>direction</small></li>
                 </a>
               </ul>
+            </div>
+            <div class="IHShareGroup">
+              <div id="collapseIHShare" class="collapse" aria-labelledby="IHShare">
+                <div class="card-body bg-light">
+                   <p>This is an example of what you'll share</p>
+                   <div class="bg-white IHShareView">971.34.344.7777 <a href="#"><i class="far fa-copy"></i></a></div>
+                   <ul class="socialIcons">
+                     <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                     <li><a href=""><i class="fab fa-google"></i></a></li>
+                     <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                   </ul>
+                </div>
+              </div>
             </div>
           </div>
           <div class="mapSideWrapper buildingAddress">
@@ -155,7 +176,7 @@
               <h5>Address</h5>
               <p>Apartment: 210, El-Ewis bldg, Ammar Bin Yasser road, Elmowahiat 3 ,Ajman.</p>
             </div>
-            <hr class="row">
+            <hr class="">
             <div class="landmark">
               <h5>landmark</h5>
               <p>Opposite: Ajman Academy. Opposite: Ajman Academy.Opposite: Ajman Academy.</p>
