@@ -34,17 +34,19 @@
     <!---------------------map options ----------------------->
     <nav class="mapOptions">
       <div class="mapMenu">
-        <form class="formSearch">
+        
           <ul class='menuNav'>
             <li class="satelliteView"><a href="#" class="iconItem"><img src="images/ih-satellite.png" alt="satellite view"></a></li>
             <li class="locationView"><a href="#" class="iconItem"><img src="images/ih-crosshairs.png" alt="track ur location"></a></li>
             <li class="searchMap">
+              <form class="formSearch">
               <div class='form-group'>
                 <input type="text" id="searchInput" class="form-control searchInput">
                 <a href="#" class="iconItem search"><img src="images/ih-search.png" alt="search"></a>
                 <a href="#" class="iconItem cancel" style="display: none;"><img src="images/ih-cancel.png"
                     alt="search"></a>
               </div>
+            </form>
             </li>
             <li class="setAddress setAddressLarge" data-trigger="#navbar_main">
               <a href="#"><img alt="logo" src="images/ih-logo.png">
@@ -73,7 +75,7 @@
 
             </li>
           </ul>
-        </form>
+        
       </div>
       <!-----------------the offCanvas - left side bar------------------->
       <div class="mobile-offcanvas sideFullHeight" id='navbar_main'>
@@ -89,7 +91,7 @@
            <button class="float-right d-none d-md-block toggleSideMenu"><i class="las la-ellipsis-v"></i></button>
          </div>
           <div class="mapSideWrapper buildingSlider">
-            <div id="carouselExampleIndicators" class="carousel slide" data data-pause="true">
+            <div id="ihAddressCarousel" class="carousel slide" data data-pause="true">
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img class="d-block w-100" src="images/building.jpeg" alt="First slide">
@@ -105,13 +107,13 @@
                 </div>
               </div>
               <ol class="carousel-indicators">
-                <img data-target="#carouselExampleIndicators" data-slide-to="0" class="active"
+                <img data-target="#ihAddressCarousel" data-slide-to="0" class="active"
                   src="images/building.jpeg" alt="first slide">
-                <img data-target="#carouselExampleIndicators" data-slide-to="1" width="30" src="images/building2.jpg"
+                <img data-target="#ihAddressCarousel" data-slide-to="1" width="30" src="images/building2.jpg"
                   alt="second slide">
-                <img data-target="#carouselExampleIndicators" data-slide-to="2" width="30" src="images/building.jpeg"
+                <img data-target="#ihAddressCarousel" data-slide-to="2" width="30" src="images/building.jpeg"
                   alt="Third slide">
-                <img data-target="#carouselExampleIndicators" data-slide-to="3" width="30" src="images/building2.jpg"
+                <img data-target="#ihAddressCarousel" data-slide-to="3" width="30" src="images/building2.jpg"
                   alt="forth slide">
               </ol>
               <div class="clearfix"></div>
@@ -122,8 +124,8 @@
               <p>971.34.344.7777 <span class=" ml-1"><img src="images/ih-check.png" alt='Accurate address'> (95%)</span>
               </p>
             </div>
-            <hr class="row">
-            <div class="shareOptions row d-flex justify-content-center">
+            <hr>
+            <div class="shareOptions d-flex justify-content-center">
               <ul>
                 <a href="#">
                   <li><i class="fas fa-clone"></i><small>copy link</small></li>
@@ -164,7 +166,7 @@
               <h5>Address</h5>
               <p>Apartment: 210, El-Ewis bldg, Ammar Bin Yasser road, Elmowahiat 3 ,Ajman.</p>
             </div>
-            <hr class="row">
+            <hr>
             <div class="landmark">
               <h5>landmark</h5>
               <p>Opposite: Ajman Academy. Opposite: Ajman Academy.Opposite: Ajman Academy.</p>

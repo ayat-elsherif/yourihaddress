@@ -34,55 +34,63 @@
     <!---------------------map options ----------------------->
     <nav class="mapOptions">
       <div class="mapMenu">
-        <form class="formSearch">
-          <ul class='menuNav'>
-            <li><a href="#" class="iconItem"><img src="images/ih-satellite.png" alt="satellite view"></a></li>
-            <li><a href="#" class="iconItem"><img src="images/ih-crosshairs.png" alt="track ur location"></a></li>
-            <li class="searchMap">
+        <ul class='menuNav'>
+          <li class="satelliteView"><a href="#" class="iconItem"><img src="images/ih-satellite.png" alt="satellite view"></a></li>
+          <li class="locationView"><a href="#" class="iconItem"><img src="images/ih-crosshairs.png" alt="track ur location"></a></li>     
+          <li class="searchMap">
+            <form class="formSearch">
               <div class='form-group'>
                 <input type="text" id="searchInput" class="form-control searchInput">
                 <a href="#" class="iconItem search"><img src="images/ih-search.png" alt="search"></a>
                 <a href="#" class="iconItem cancel" style="display: none;"><img src="images/ih-cancel.png"
                     alt="search"></a>
               </div>
-            </li>
-            <li class="setAddress" data-trigger="#navbar_main">
-              <a href="#"><img alt="logo" src="images/ih-logo.png">
-                Set your IH address </a>
-            </li>
-            <li>
-              <button class="navbar-toggler navbar-toggler-right bg-color" type="button" data-toggle="collapse"
-                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation">
+          </form>
+          </li>
+          <li class="setAddress setAddressLarge" data-trigger="#navbar_main">
+            <a href="#"><img alt="logo" src="images/ih-logo.png">
+              Set your IH address </a>
+          </li>
+          <li class="menuGroupCont">
+            <div class="btn-group">
+              <button type="button" class="btn navbar-toggler dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
               </button>
-              <div class="collapse navbar-collapse text-left bg-light" id="navbarResponsive">
-                <ul class="navbar-nav">
+              <div class="dropdown-menu">
+                <ul class="list-unstyled">
                   <li class="nav-item">
-                    <a class="nav-link active" href="#">About IH</a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Developers</a>
+                    <a class="nav-link" href="#">About IH</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class=" nav-link" href="#">Developers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class=" nav-link" href="#">Contact Us</a>
                   </li>
                 </ul>
               </div>
-            </li>
-          </ul>
-        </form>
+            </div>
+
+          </li>
+        </ul>
       </div>
       <!-----------------the offCanvas - left side bar------------------->
-      <div class="mobile-offcanvas" id='navbar_main'>
+      <div class="mobile-offcanvas sideFullHeight" id='navbar_main'>
         <div class="offcanvas-header">
-          <button class="float-right"><i class="las la-ellipsis-v"></i></button>
+          <!-------mobile view-------->
+          <li class="setAddress setAddressSmall"  id ="login_soicel" data-trigger="#navbar_main">
+              <a href="#"><img alt="logo" src="images/ih-logo.png">
+                Set your IH address </a>
+                <span class="fa arrow"></span>
+            </li>
+            <!-------END mobile view-------->
+            <button class="float-right d-none d-md-block toggleSideMenu"><i class="las la-ellipsis-v"></i></button>
+          
         </div>
         <div class="mapSideMenu">
                 <!-----------------the image-slider------------------->
           <div class="mapSideWrapper buildingSlider">
-            <div id="carouselExampleIndicators" class="carousel slide" data data-pause="true">
+            <div id="ihAddressCarousel" class="carousel slide" data data-pause="true">
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <img class="d-block w-100" src="images/building.jpeg" alt="First slide">
@@ -98,27 +106,27 @@
                 </div>
               </div>
               <ol class="carousel-indicators">
-                <img data-target="#carouselExampleIndicators" data-slide-to="0" class="active"
+                <img data-target="#ihAddressCarousel" data-slide-to="0" class="active"
                   src="images/building.jpeg" alt="first slide">
-                <img data-target="#carouselExampleIndicators" data-slide-to="1" width="30" src="images/building2.jpg"
+                <img data-target="#ihAddressCarousel" data-slide-to="1" width="30" src="images/building2.jpg"
                   alt="second slide">
-                <img data-target="#carouselExampleIndicators" data-slide-to="2" width="30" src="images/building.jpeg"
+                <img data-target="#ihAddressCarousel" data-slide-to="2" width="30" src="images/building.jpeg"
                   alt="Third slide">
-                <img data-target="#carouselExampleIndicators" data-slide-to="3" width="30" src="images/building2.jpg"
+                <img data-target="#ihAddressCarousel" data-slide-to="3" width="30" src="images/building2.jpg"
                   alt="forth slide">
               </ol>
               <div class="clearfix"></div>
             </div>
           </div>
                 <!------------------sharing options------------------->
-          <div class="mapSideWrapper buildingSocial">
+          <div class="mapSideWrapper buildingSocial flex-grow-1">
             <div class="ihNumber">
               <p>971.34.344.7777 <span class=" ml-1"><img src="images/ih-check.png" alt='Accurate address'> (95%)</span>
               </p>
             </div>
-            <hr class="row">
+            <hr class="">
             <div>
-              <form class="saveAddress">
+              <form class="saveAddress px-3">
                   <div class="form-group">
                     <textarea class="form-control" placeholder="Address name:"></textarea>
                   </div>
