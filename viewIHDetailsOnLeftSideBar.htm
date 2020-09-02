@@ -78,7 +78,7 @@
         
       </div>
       <!-----------------the offCanvas - left side bar------------------->
-      <div class="mobile-offcanvas sideFullHeight" id='navbar_main'>
+      <div class="mobile-offcanvas showCanvas sideFullHeight" id='navbar_main'>
         <div class="mapSideMenu">
           <div class="offcanvas-header">
             <!-------mobile view-------->
@@ -121,8 +121,8 @@
           </div>
           <div class="mapSideWrapper buildingSocial">
             <div class="ihNumber">
-              <p>971.34.344.7777 <span class=" ml-1"><img src="images/ih-check.png" alt='Accurate address'> (95%)</span>
-              </p>
+              <p>971.34.344.7777 
+              </p><span class=" ml-1"><img src="images/ih-check.png" alt='Accurate address'> (95%)</span>
             </div>
             <hr>
             <div class="shareOptions d-flex justify-content-center">
@@ -136,7 +136,7 @@
                 <a href="#">
                   <li><i class="fas fa-bookmark"></i><small>save</small></li>
                 </a>
-                <a href="#"  id="IHShare">
+                <a href="#" class="IHShare"  id="IHShare">
                   <li class="collapsed" data-toggle="collapse" data-target="#collapseIHShare" aria-expanded="false" aria-controls="collapseIHShare">
                     <i class="fas fa-share-alt"></i><small>share</small></li>
                 </a>
@@ -147,8 +147,9 @@
             </div>
         
               <div class="IHShareGroup">
-                <div id="collapseIHShare" class="collapse" aria-labelledby="IHShare">
+                <div id="collapseIHShare" class="collapse collapseIHShare" aria-labelledby="IHShare">
                   <div class="card-body bg-light">
+                    <div class="close-button d-block d-md-none">close</div>
                      <p>This is an example of what you'll share</p>
                      <div class="bg-white IHShareView">971.34.344.7777 <a href="#"><i class="far fa-copy"></i></a></div>
                      <ul class="socialIcons">
