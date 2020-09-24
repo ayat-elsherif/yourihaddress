@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#ed414e">
+  <meta name="description" content="set your ih address">
+  <meta property="og:site_name" content="ihaddress.Com">
+  <meta property="og:url" content=" www.ihaddress.com">
+  <meta property="og:image" content="images/favicon.png">
+  <meta name="robots" content="index,follow,max-snippet:100">
+  <meta name="googlebot" content="index,follow,max-snippet:100">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <title>IH Address</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/line-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style-min.css">
+</head>
+
+<body>
+  <div class="container-fluid px-0 mapContainer">
+    <!------------------the map element--------------------->
+    <div class="map">
+      <!-- <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d55306.73397503105!2d30.938824844379333!3d29.960144228369224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1593018615850!5m2!1sen!2seg"
+        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe> -->
+    </div>
+
+
+    <!--@@@@@@@@ Here goes the spinner / loader
+
+          <div class="full-page">
+          <div class="loading">
+            <div class="loader"></div>
+          </div>
+        </div> -->
+    <!------------------end the map element------------------->
+    <!---------------------map options ----------------------->
+    <nav class="mapOptions">
+      <div class="mapMenu">
+        <ul class='menuNav'>
+          <li class="satelliteView"><a href="" class="iconItem"><img src="images/ih-satellite.png"
+                alt="satellite view"></a></li>
+          <li class="locationView"><a href="" class="iconItem"><img src="images/ih-crosshairs.png"
+                alt="track ur location"></a></li>
+          <li class="searchMap">
+            <form class="formSearch" method="post">
+              <div class='form-group'>
+                <input type="text" id="searchInput" class="form-control searchInput">
+                <a href="#" class="iconItem search"><img src="images/ih-search.png" alt="search"></a>
+                <a href="#" class="iconItem cancel" style="display: none;"><img src="images/ih-cancel.png"
+                    alt="search"></a>
+              </div>
+            </form>
+          </li>
+          <li class="setAddress setAddressLarge" id="login_soicel" data-trigger="#navbar_main">
+            <a href="#"><img alt="logo" src="images/ih-logo.png">
+              Set your IH address </a>
+          </li>
+          <li class="menuGroupCont">
+            <div class="btn-group">
+              <button type="button" class="btn navbar-toggler dropdown-toggle" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+              </button>
+              <div class="dropdown-menu">
+                <ul class="list-unstyled">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">About IH</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class=" nav-link" href="#">Developers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class=" nav-link" href="#">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </li>
+        </ul>
+      </div>
+      <!-----------------the offCanvas - left side bar------------------->
+    </nav>
+
+    <div class="mobile-offcanvas showCanvas sideFullHeight" id='navbar_main'>
+      <div class="mapSideMenu">
+        <div class="offcanvas-header">
+          <!-------mobile view-------->
+          <li class="setAddress setAddressSmall" id="login_soicel" data-trigger="#navbar_main">
+            <a href="#"><img alt="logo" src="images/ih-logo.png">
+              Set your IH address </a>
+            <span class="fa arrow"></span>
+          </li>
+          <!-------END mobile view-------->
+          <button class="float-right d-none d-md-block toggleSideMenu"><i class="las la-ellipsis-v"></i></button>
+        </div>
+        <div class="mapSideWrapper setAddressForm h-100">
+          
+
+              <div class='multiStepFormCont'>
+                <!-- multistep form -->
+                <form class="form" style='position: relative;'>
+                  
+                  <div class="form-step step1 animated fadeIn">
+                    <div class="row mx-0">
+                      <div class="col-12 py-3 px-5">
+                    <h5 class="text-uppercase pb-1">set your ih address</h5>
+              <span class="text-uppercase">address:</span>
+             
+                <div class="form-group">
+                  <label for="validationCustom04">Country:</label>
+                  <select class="custom-select" id="validationCustom04" required>
+                    <option selected disabled value="">Egypt</option>
+                    <option>Egypt</option>
+                    <option>Egypt</option>
+                    <option>Egypt</option>
+                    <option>Egypt</option>
+                    <option>Egypt</option>
+                    <option>Egypt</option>
+                    <option>Egypt</option>
+                    <option>Egypt</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="inputState">State/Province/Region</label>
+                  <input type="text" class="form-control" id="inputState">
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress">Street Name</label>
+                  <input type="text" class="form-control" id="inputAddress">
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress2">Street Name 2</label>
+                  <input type="text" class="form-control" id="inputAddress2">
+                </div>
+                My Home Is :
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadioInline1">Apartment</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                  <label class="custom-control-label" for="customRadioInline2">Villa</label>
+                </div>
+                <div class="form-group pt-2">
+                  <label for="inputBuilding">Building Name</label>
+                  <input type="text" class="form-control" id="inputBuilding">
+                </div>
+                <div class="form-group">
+                  <label for="inputBuilding">Apartment/Villa No.</label>
+                  <input type="text" class="form-control" id="inputBuilding">
+                </div>
+                <span class="text-uppercase text-dark font-weight-bold">landmark:</span>
+                <div class="form-group pt-2">
+                  <select class="custom-select" id="validationCustom04">
+                    <option selected disabled value="">Opposite</option>
+                    <option>Behind</option>
+                    <option>Near</option>
+                    <option>Some Building Of</option>
+                  </select>
+                  <input type="text" class="form-control mt-1" placeholder="Opposite to...">
+                </div>
+                <span class="text-uppercase text-dark font-weight-bold">location:</span><br>
+                <div class="custom-control custom-checkbox mr-sm-2">
+                  <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                  <label class="custom-control-label" for="customControlAutosizing">Current Location</label>
+                </div>
+                <div class=" justify-content-center">
+                  <button type="button" class="btn btn-color nextIH">Create <img src="images/create-icon.png" width="20"></button>
+                </div>
+                </div>
+              </div>
+                  </div>
+                  <div class="form-step step2 animated fadeIn" style="display: none;">
+                    <div class="mapSideWrapper buildingSlider">
+                      <div class="photoUploadingCont">
+                        <div class="UploadingWrapper">
+                          <div class="getPhotosCont hand-bg hintPhotos">
+                            <div class="howToWrapper">
+                              <h5>
+                                How to get photos
+                              </h5>
+                              <h2>of your home?</h2>
+                              <p>You have to take good photos of your home and mark one arrow to your home</p>
+            
+                              <div class="fileButton">
+                                <a class=" btn-color btn">next..</a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="getPhotosCont uploadPhotos">
+                            <div class='photoSource'>
+                              <ul>
+                                <li> <a href="#"><i class="las la-camera"></i> Camera</a></li>
+                                <li> <a href="#"><i class="las la-paperclip"></i> Upload</a></li>
+                              </ul>
+                            </div>
+                            <div class="photoBoxes">
+                             
+                                <ul>
+                                  <li>
+                                    <button class="buttonFile"><img class='displayImg' src="" alt=""></button>
+                                    <input type="file" class="hiddenFile" hidden>
+                                    <h6 class="fileDesc"> Photo 1</h6>
+                                  </li>
+                                  <li>
+                                    <button class="buttonFile"><img class='displayImg' src="" alt=""></button>
+                                    <input type="file" class="hiddenFile" hidden>
+                                    <h6 class="fileDesc"> Photo 1</h6>
+                                  </li>
+                                  <li>
+                                    <button class="buttonFile"><img class='displayImg' src="" alt=""></button>
+                                    <input type="file" class="hiddenFile" hidden>
+                                    <h6 class="fileDesc"> Photo 1</h6>
+                                  </li>
+                                  <li>
+                                    <button class="buttonFile"><img class='displayImg' src="" alt=""></button>
+                                    <input type="file" class="hiddenFile" hidden>
+                                    <h6 class="fileDesc"> Photo 1</h6>
+                                  </li>
+                                </ul>
+                              
+                            </div>
+                            <div class="text-right">
+                              <button class="btn-color btn">Upload</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mapSideWrapper buildingSocial">
+                      <div class="bg-opacity">
+                        <div class="ihNumber">
+                          <p>971.34.344.7777</p>
+                          <span class="text-muted ml-1"><i class="fas fa-check-circle"></i> 6557</span>
+                          <span class="text-muted ml-1"><i class="fas fa-times-circle"></i> 45</span>
+                        </div>
+                        <hr class="">
+                        <div class="shareOptions d-flex justify-content-center">
+                          <ul>
+                            <a href="#">
+                              <li><i class="fas fa-clone"></i><small>copy link</small></li>
+                            </a>
+                            <a href="#">
+                              <li><img src='images/ih-logo.png' alt="ih" width="45"><small>copy no.</small></li>
+                            </a>
+                            <a href="#">
+                              <li><i class="fas fa-bookmark"></i><small>save</small></li>
+                            </a>
+                            <a href="#">
+                              <li><i class="fas fa-share-alt"></i><small>share</small></li>
+                            </a>
+                            <a href="#">
+                              <li><i class="fas fa-directions"></i><small>direction</small></li>
+                            </a>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mapSideWrapper buildingAddress">
+                      <div class="address">
+                        <h5>Address</h5>
+                        <p>Apartment: 210, El-Ewis bldg, Ammar Bin Yasser road, Elmowahiat 3 ,Ajman.</p>
+                      </div>
+                      <hr class="">
+                      <div class="landmark">
+                        <h5>landmark</h5>
+                        <p>Opposite: Ajman Academy. Opposite: Ajman Academy.Opposite: Ajman Academy.</p>
+                      </div>
+            
+                      <div class="checkAddress text-center mt-4">
+                        <a class="btn  btn-outline-dark btn-outline-pink backIH"><small><i class="fas fa-chevron-left"></i>
+                            Back</small></a>
+                        <button type="submit" class="btn btn-color btn-pink createIH"><small> Create</small><img src="images/create-icon.png"
+                            alt="ih-logo"></button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+           
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
