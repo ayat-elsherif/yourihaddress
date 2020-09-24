@@ -107,7 +107,9 @@ $(backIH).click(function(e){
 
 
 /**************************************open social media from android in mobile view**************************************** */
+if($(window).width()<767){
 
+  
 const shareButton = document.querySelector('.IHShare');
 const shareDialog = document.querySelector('.collapseIHShare');
 const closeButton = document.querySelector('.close-button');
@@ -131,3 +133,4 @@ shareButton.addEventListener('click', event => {
 // closeButton.addEventListener('click', event => {
 //   shareDialog.classList.remove('show');
 // });
+}

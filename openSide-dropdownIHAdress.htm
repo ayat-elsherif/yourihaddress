@@ -47,11 +47,11 @@
               </div>
             </form>
             </li>
+            <!-------------------------IH Adress after logged in ------------------------->
             <li class="setAddress setAddressLarge" id="accordion">
               <div href="#" id="heading" data-toggle="collapse" data-target="#collapsing" aria-expanded="true"
                 aria-controls="collapsing">
-                <img alt="logo" src="images/ih-logo.png">
-                971.34.344.7777
+                <img alt="logo" src="images/ih-logo.png">971.34.344.7777
                 <div id="collapsing" class="collapse" aria-labelledby="heading" data-parent="#accordion">
                   <div class="card-body">
                     <ul class="ihOptions">
@@ -66,6 +66,8 @@
                 </div>
               </div>
             </li>
+          <!-------------------------END IH Adress after logged in ------------------------->
+
             <li class="menuGroupCont">
               <div class="btn-group">
                 <button type="button" class="btn navbar-toggler dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -85,7 +87,6 @@
                   </ul>
                 </div>
               </div>
-
             </li>
           </ul>
         
@@ -95,7 +96,7 @@
         <div class="offcanvas-header"> <!-------mobile view-------->
           <li class="setAddress setAddressSmall"  id ="login_soicel" data-trigger="#navbar_main">
               <a href="#"><img alt="logo" src="images/ih-logo.png">
-                Set your IH address </a>
+                971.34.344.7777 </a>
                 <span class="fa arrow"></span>
             </li>
             <!-------END mobile view-------->
@@ -137,40 +138,34 @@
               </p>
             </div>
             <hr>
-            <div class="shareOptions d-flex justify-content-center">
+
+
+            <!------------------------------- Links after signin and search----------------------------->
+            <!----@@@@@@@@@@ notice: .signed-in-links css class is added to this section div in login case @@@@@@@@@@@---->
+            <div class="shareOptions d-flex justify-content-center signed-in-links">
               <ul>
                 <a href="#">
-                  <li><i class="fas fa-clone"></i><small>copy link</small></li>
+                  <li><i class="las la-copy"></i><small>copy <br> link</small></li>
                 </a>
                 <a href="#">
-                  <li><img src='images/ih-logo.png' alt="ih" width="45"><small>copy no.</small></li>
+                  <li><img src='images/ih-logo.png' alt="ih"><small>copy <br> no.</small></li>
                 </a>
                 <a href="#">
-                  <li><i class="fas fa-bookmark"></i><small>save</small></li>
-                </a>
-                <a href="#" class="IHShare">
-                  <li class="collapsed" data-toggle="collapse" data-target="#collapseIHShare" aria-expanded="false" aria-controls="collapseIHShare">
-                    <i class="fas fa-share-alt"></i><small>share</small></li>
+                  <li><img src='images/editIH.png'><small>Edit <br> Your IH</small></li>
                 </a>
                 <a href="#">
-                  <li><i class="fas fa-directions"></i><small>direction</small></li>
+                  <li><i class="las la-bookmark"></i><small>saved <br> Address</small></li>
+                </a>
+                <a href="#">
+                  <li><i class="las la-trash-alt"></i><small>Delete <br> Your IH</small></li>
+                </a>
+                <a href="#">
+                  <li><i class="las la-sign-out-alt"></i><small>Sign <br> Out</small></li>
                 </a>
               </ul>
             </div>
-            <div class="IHShareGroup">
-              <div id="collapseIHShare" class="collapse collapseIHShare " aria-labelledby="IHShare">
-                <div class="card-body bg-light">
-                  <div class="close-button d-block d-md-none">close</div>
-                   <p>This is an example of what you'll share</p>
-                   <div class="bg-white IHShareView">971.34.344.7777 <a href="#"><i class="far fa-copy"></i></a></div>
-                   <ul class="socialIcons">
-                     <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                     <li><a href=""><i class="fab fa-google"></i></a></li>
-                     <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                   </ul>
-                </div>
-              </div>
-            </div>
+          <!------------------------------- ENd Links after signin and search----------------------------->
+
           </div>
           <div class="mapSideWrapper buildingAddress">
             <div class="address">
@@ -184,10 +179,10 @@
             </div>
                   
           <div class="checkAddress text-center mt-4">
-            <button class="btn  btn-outline-dark btn-outline-pink"><small><i class="fas fa-chevron-left"></i>
-                Back</small></button>
-            <button class="btn btn-color btn-pink"><small> Create</small><img src="images/create-icon.png"
-                alt="ih-logo"></button>
+            <span class="btn"> Is it correct address?
+              <a class="checkedYes" href=""><i class="las la-check"></i>YES</a>
+              <a class="checkedNo" href=""><i class="las la-times"></i>NO</a>
+            </span>
           </div>
           </div>
         </div>
