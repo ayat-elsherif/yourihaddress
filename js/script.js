@@ -111,10 +111,10 @@ if($(window).width()<767){
 
   
 const shareButton = document.querySelector('.IHShare');
-const shareDialog = document.querySelector('.collapseIHShare');
-const closeButton = document.querySelector('.close-button');
+// const shareDialog = document.querySelector('.collapseIHShare');
+// const closeButton = document.querySelector('.close-button');
 
-shareButton.addEventListener('click', event => {
+$(shareButton).on('click', event => {
   if (navigator.share) { 
    navigator.share({
       title: 'IH Address',
